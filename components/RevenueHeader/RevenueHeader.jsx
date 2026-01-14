@@ -98,25 +98,56 @@ import Chart from 'chart.js/auto'
 export default function RevenueHeader() {
   const [enabled, setEnabled] = useState(true)
 
-  useEffect(() => {
-    new Chart(document.getElementById("refChart"),{
-      type:"bar",
-      data:{
-        labels:["Jun","Jul","Aug","Sep","Oct"],
-        datasets:[{ data:[52,68,61,79,74], borderRadius:12 }]
-      },
-      options:{plugins:{legend:{display:false}},scales:{x:{display:false},y:{display:false}}}
-    })
+  // useEffect(() => {
+  //   new Chart(document.getElementById("refChart"),{
+  //     type:"bar",
+  //     data:{
+  //       labels:["Jun","Jul","Aug","Sep","Oct"],
+  //       datasets:[{ data:[52,68,61,79,74], borderRadius:12 }]
+  //     },
+  //     options:{plugins:{legend:{display:false}},scales:{x:{display:false},y:{display:false}}}
+  //   })
 
-    new Chart(document.getElementById("salesChart"),{
-      type:"line",
-      data:{
-        labels:["Jun","Jul","Aug","Sep","Oct","Nov"],
-        datasets:[{ data:[22,36,29,44,39,51], tension:.4, borderWidth:3 }]
-      },
-      options:{plugins:{legend:{display:false}},scales:{x:{display:false},y:{display:false}}}
-    })
-  },[])
+  //   new Chart(document.getElementById("salesChart"),{
+  //     type:"line",
+  //     data:{
+  //       labels:["Jun","Jul","Aug","Sep","Oct","Nov"],
+  //       datasets:[{ data:[22,36,29,44,39,51], tension:.4, borderWidth:3 }]
+  //     },
+  //     options:{plugins:{legend:{display:false}},scales:{x:{display:false},y:{display:false}}}
+  //   })
+  // },[])
+  useEffect(() => {
+
+  const refCtx = document.getElementById("refChart")
+  const salesCtx = document.getElementById("salesChart")
+
+  if(!refCtx || !salesCtx) return
+
+  const refChart = new Chart(refCtx,{
+    type:"bar",
+    data:{
+      labels:["Jun","Jul","Aug","Sep","Oct"],
+      datasets:[{ data:[52,68,61,79,74], borderRadius:12 }]
+    },
+    options:{plugins:{legend:{display:false}},scales:{x:{display:false},y:{display:false}}}
+  })
+
+  const salesChart = new Chart(salesCtx,{
+    type:"line",
+    data:{
+      labels:["Jun","Jul","Aug","Sep","Oct","Nov"],
+      datasets:[{ data:[22,36,29,44,39,51], tension:.4, borderWidth:3 }]
+    },
+    options:{plugins:{legend:{display:false}},scales:{x:{display:false},y:{display:false}}}
+  })
+
+  return () => {
+    refChart.destroy()
+    salesChart.destroy()
+  }
+},[])
+
 
   return (
     <div className="rev-wrap">
