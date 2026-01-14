@@ -1,0 +1,75 @@
+.sidebar {
+  width: 64px;
+  height: 100vh;
+  background: linear-gradient(#f3f0ee,#ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  border-right: 1px solid #eee;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.side-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.side-icons button {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .25s ease;
+}
+
+/* HOVER EFFECT */
+.side-icons button:hover {
+  /* color: #ff2d55; */
+  /* background: rgba(255,45,85,.08); */
+  background: #ff2d55;
+  box-shadow: 0 10px 22px rgba(255,45,85,.35);
+  transform: translateY(-2px);
+}
+
+/* ACTIVE */
+.side-icons .active {
+  background: #ff2d55;
+  color: white;
+  box-shadow: 0 10px 25px rgba(255,45,85,.45);
+}
+
+.side-bottom button {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: none;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+  cursor: pointer;
+  transition: .25s;
+}
+
+.side-bottom button:hover {
+  color: #ff2d55;
+}

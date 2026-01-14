@@ -1,0 +1,99 @@
+.topbar-wrap {
+  background: #faf7f5;
+  padding: 14px 24px 10px;
+}
+
+/* ROWS */
+.topbar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.topbar-row.second {
+  margin-bottom: 0;
+}
+
+/* SEARCH */
+.search-box {
+  background: white;
+  border-radius: 999px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 360px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.04);
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+/* RIGHT */
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(45deg,#ff7a9f,#ffc1d1);
+  border-radius: 50%;
+}
+
+/* CHIPS */
+.user-pills {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.pill-user, .pill-chip {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: white;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.pill-user.active {
+  background: #eaf4ff;
+}
+
+.pill-chip.black {
+  background: black;
+  color: white;
+}
+
+/* ACTIONS */
+.top-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* BUTTONS */
+.circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle-btn.pink {
+  background: #eb4c6a;
+  color: white;
+}

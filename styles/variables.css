@@ -1,0 +1,13 @@
+:root {
+  --bg-main: #f6f2f1;
+  --card-bg: #ffffff;
+  --soft-bg: #f2f0ef;
+  --primary: #eb4c6a;
+  --text-dark: #1c1c1c;
+  --text-muted: #8b8b8b;
+  --border-soft: #e6e2e1;
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+}

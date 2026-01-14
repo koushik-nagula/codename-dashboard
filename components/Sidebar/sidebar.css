@@ -1,0 +1,63 @@
+.sidebar {
+  background: #f6f2f1;
+  width: 260px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.nav-section
+.nav-item,
+.nav-tree
+.tree-item,
+.tree-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.nav-item {
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: #ebe6e5;
+}
+
+.nav-title {
+  /* margin: 10px 0; */
+  margin-left: 22px;
+  font-size: 12px;
+  color: #999;
+}
+
+.tree-item {
+  background: #eb4c6a;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 14px;
+  margin-left: 10px;
+}
+
+.tree-child {
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-left: 20px;
+}
+
+.tree-child:hover {
+  background: #ebe6e5;
+}
+
+.badge {
+  background: #eb4c6a;
+  color: white;
+  border-radius: 999px;
+  font-size: 11px;
+  padding: 2px 8px;
+  margin-left: auto;
+}
